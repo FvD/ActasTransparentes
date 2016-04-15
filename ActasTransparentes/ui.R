@@ -1,11 +1,14 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
+# ActasTransparentes - SanCarlos-RUG
 # 
-#    http://shiny.rstudio.com/
+# Esta arhivo ui.R contiene la definición de la interfaz de la aplicación
+# Shiny. En otras palabras, contiene las instrucciones de como mostrar la
+# aplicación en el navegador.
 #
+# Si has abierto este archivo en RStudio puedes correrlo seleccionando 'Run
+# App' arriba.
+#
+# Aprende como usar Shiny con el tutorial: http://shiny.rstudio.com/tutorial/
+# 
 
 library(shiny)
 
@@ -13,21 +16,22 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Actas Transparentes"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
+       selectInput("acta_sel",
+                   "Selecciona Acta",
+                   choices = c("Julio 2015" = "201507",
+                               "Enero 2016" = "201601")
+       ),
+       actionButton("downloadButton", "Procesar Acta")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+       plotOutput("wordcloud")
     )
   )
 ))
