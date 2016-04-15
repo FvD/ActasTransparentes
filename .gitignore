@@ -19,5 +19,5 @@ vignettes/*.pdf
 .httr-oauth
 
 # Do not upload PDF files
-.pdf
-.PDF
+*/*.pdf
+*/*.PDF
