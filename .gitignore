@@ -2,6 +2,7 @@
 .Rhistory
 .Rapp.history
 .Ruserdata
+.Rproj.user
 
 # Session Data files
 .RData
@@ -20,11 +21,8 @@ vignettes/*.pdf
 .httr-oauth
 
 # Do not upload PDF files
-<<<<<<< b233b19ac2a3061d4f3edbabaaeb44a502bf1501
 */*.pdf
 */*.PDF
-=======
 .pdf
 .PDF
-.Rproj.user
->>>>>>> Inicio del proyecto usando el menu
+
