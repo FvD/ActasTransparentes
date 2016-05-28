@@ -10,7 +10,7 @@ de su proyecto de transparencia.
 Para empezar a trabajar has un "fork" del proyecto (apreta el botón "Fork"
 arriba a la derecha). Esto te da tu propia copia de trabajo y puedes empezar a
 escribir código. Siempre puedes mirar como van los demás apretando el numero al
-lado de "Fork". Verás todas las ramas del proyecot y podrás ver que tan
+lado de "Fork". Verás todas las ramas del proyecto y podrás ver que tan
 adelantados están.
 
 Durante las reuniones del grupo de usuarios R vamos a comparar soluciones y
