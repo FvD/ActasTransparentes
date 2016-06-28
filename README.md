@@ -1,6 +1,4 @@
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/SanCarlos-RUG)
-
-# ActasTransparentes
+# Actas Transparentes
 
 Actas Transparantes es un Proyecto del San Carlos RUG para aprender R haciendo
 aplicaciones útiles. El objetivo es construir una aplicacion con Shiny para
@@ -34,3 +32,8 @@ Para encontontrarnos, ver discusiones pasadas, escribir sobre tus experiencias, 
 o charlar puedes mirar en [Facebook](https://www.facebook.com/groups/SanCarlosRUG),
 [meetup.com](http://www.meetup.com/es-ES/San-Carlos-R-User-Group/) y aqui 
 en [Github](http://sancarlos-rug.github.io/).
+
+# Correr el codigo
+Al principio del proyecto nos dimos cuenta que las actas en formato PDF son demasiado pesados (grandes) para trabajarlos directamente. En vez hemos creado un proceso de transformación y carga de los documentos a una base de datos NoSQL. Para ver como funciona lee [CouchDB para Actas Transparentes](http://rpubs.com/FvD/CouchDBActasTransparentes). 
+
+El codigo como esta aqui asume que tienes una base de datos que se llama "actasmunisc" en una base de datos CouchDB local (en tu computador). Puedes hacer la conección a una base de datos en la nube, y mas adelante buscaremos un sitio para alojar una base de datos en producción. Busca uno de los otros miembros del grupo de usuarios para ver si puedes replicar la base de datos de otro para arrancar.
