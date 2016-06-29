@@ -2,6 +2,7 @@
 .Rhistory
 .Rapp.history
 .Ruserdata
+.Rproj.user
 
 # Session Data files
 .RData
@@ -22,4 +23,5 @@ vignettes/*.pdf
 # Do not upload PDF files
 */*.pdf
 */*.PDF
-.Rproj.user
+.pdf
+.PDF

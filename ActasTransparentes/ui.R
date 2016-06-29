@@ -21,16 +21,12 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       selectInput("acta_sel",
-                   "Selecciona Acta",
-                   choices = c("Julio 2015" = "201507",
-                               "Enero 2016" = "201601")
-       ),
-       actionButton("downloadButton", "Procesar Acta")
+      uiOutput("acta_sel")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
+       #textOutput("test_text"),
        plotOutput("wordcloud")
     )
   )
