@@ -1,6 +1,8 @@
 # History files
 .Rhistory
 .Rapp.history
+.Ruserdata
+.Rproj.user
 
 # Session Data files
 .RData
@@ -15,9 +17,11 @@
 vignettes/*.html
 vignettes/*.pdf
 
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+# OAuth2 token
 .httr-oauth
 
 # Do not upload PDF files
 */*.pdf
 */*.PDF
+.pdf
+.PDF
