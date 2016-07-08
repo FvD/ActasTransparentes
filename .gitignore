@@ -25,3 +25,8 @@ vignettes/*.pdf
 */*.PDF
 .pdf
 .PDF
+
+# Vim files
+*/*.R~
+*/*.un~
+*/*.swp
