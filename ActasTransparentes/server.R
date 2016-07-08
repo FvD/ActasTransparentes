@@ -63,6 +63,6 @@ shinyServer(function(input, output) {
     acta <- tm_map(acta, PlainTextDocument)
     acta <- tm_map(acta, removeWords, stopwords('spanish'))
     colpallette <- brewer.pal(8,"Dark2")
-    wordcloud(acta, max.words = 100, random.order=FALSE, colors=colpallette)
+    wordcloud(acta, max.words = no_palabras, random.order=FALSE, colors=colpallette)
     })
 })
