@@ -13,7 +13,8 @@ library(shiny)
 library(shinydashboard)
 
 sidebar <- dashboardSidebar(
-      uiOutput("acta_sel")
+      uiOutput("acta_sel"),
+      sliderInput(inputId = "no_palabras", "Numero Palabras", min=30, max=500, value=100)
 )
 
 body <- dashboardBody(    
