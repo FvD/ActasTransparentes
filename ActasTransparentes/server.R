@@ -15,12 +15,16 @@ library(couchDB)
 library(wordcloud)
 library(tm)
 
-# Incluyo la conneccion a un servicio central proque puede ser mas facil para
-# arrancar. Pero te recomiendo que trates de conectar a tu propia base de datos
-docdb="actasmunisc"
+# No incluyo la conneccion a un servicio central porque el servicio de Cloudant
+# tienen un limite a lo que ofrecen gratis. Si quieres hacer una replica de la
+# base de datos para arrancer con mas facilidad, mandanos un mensaje. Y si no
+# sigue todo el proceso y carga tu propia copia de las actas.
+# necestas por lo menos los siguientes datos
+docdb = "actasmunisc"
 servicio = "cloudant"
-usuario = "toishestantooldntersequi"
-clave = "ce56492f202ad782b0832fa171cddb437bff2fbd"
+source("auth.R")
+#usuario = "nombre usuario"
+#clave = "clave"
 
 # Define la lógica del servidor para la aplicación
 
