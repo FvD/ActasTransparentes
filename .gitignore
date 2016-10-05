@@ -20,6 +20,9 @@ vignettes/*.pdf
 # OAuth2 token
 .httr-oauth
 
+# Bluemix keys
+*/*auth.R
+
 # Do not upload PDF files
 */*.pdf
 */*.PDF
