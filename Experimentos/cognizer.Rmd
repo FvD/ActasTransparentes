@@ -1,0 +1,73 @@
+---
+title: "SCRUG Prueba de Bluemix"
+author: "SCRUG"
+date: "September 29, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Analysis de texto en Bluemix
+
+Estamos buscando como analysar el contenido de las actas. Una de las posibilides es usar un servicio de analisis, como lo tenemos en [IBM Bluemix](https://bluemix.net). Para seguir estos ejemplos necesitas abrir una cuenta alla, e iniciar el servicio correspondiente, para que tengas un nombre de usuario y password.
+
+Usamos el paquete `cognizer` para tener acceso mas facil a los servicios. Mira la [documentacion y ejemplos de cognizer](https://github.com/ColumbusCollaboratory/cognizer) para tener mas ideas de lo que puedes hacer con datos. 
+
+```{r cargar cognizer}
+library(cognizer)
+```
+
+## Prueba con tone analysis
+El servicio se llama IBM Tone Analysis. En el ejemplo abajo incluimos los detalles de la coneccion desde un archivo `auth.R` que no esta incluido en Github porque es personal. Cuando abres la pagina con el servicio puedes pedir por los "service credentials" y verás esta información presentada en formato JSON.
+
+```{r}
+source("auth.R")
+
+# El archivo auth.R contiene
+#tone_url <- "el url del servicio Tone Analysis"
+#tone_password <- "clave"
+#tone_username <- "nombre usuario (un codigo largo, no es tu nombre usuario Bluemix)"
+#tone_credential <- "un key largo"
+
+text <- c("Do you really only speak english?")
+result <- text_tone(text, tone_username, tone_password)
+```
+
+No funciona el ejemplo, y aun no dimos con la razon por el error. Parece que hacemos lo mismo que es en el ejemplo.
+
+## Alchemy API
+
+Alchemy usa un API-Key para hacer la conección. Es diferente a la de Tone Analysis (tienes que buscarlo cada vez al incorporar un servicio de analysis nuevo.
+
+
+```{r}
+alchemy_url <- "https://gateway-a.watsonplatform.net/calls"
+# alchemy_apikey <- "viene de auth.R"
+
+text <- c("Dime, alchemy, hablas un poco de español? Es que aqui en San Carlos 
+    eso funciona mejor. Estamos en Costa Rica")
+resultado <- text_sentiment(text, alchemy_apikey)
+
+```
+
+El AlchemyAPI tambien tiene algo llamado "keyword extraction".
+
+```{r}
+result <- text_keywords(text, apikey)
+```
+
+Y tambien entity extraction
+
+```{r}
+resultado <- text_entity(text, apikey)
+```
+
+Otro que busca categorizar el significado del contenido del texto
+
+```{r}
+resultado <- text_concept(text, apikey)
+```
+
+
